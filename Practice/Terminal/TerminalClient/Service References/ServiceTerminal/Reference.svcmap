@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47c1bedc-005b-4ce3-9f7f-106b3081e2c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:38573/Terminal/Terminal.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Terminal.xsd" MetadataType="Schema" ID="bc418e1e-332e-4138-b3d5-e94cde33954e" SourceId="1" SourceUrl="http://localhost:38573/Terminal/Terminal.svc?xsd=xsd0" />
+    <MetadataFile FileName="Terminal1.xsd" MetadataType="Schema" ID="31b1592a-9067-40c3-9291-521f19f91eda" SourceId="1" SourceUrl="http://localhost:38573/Terminal/Terminal.svc?xsd=xsd1" />
+    <MetadataFile FileName="Terminal.wsdl" MetadataType="Wsdl" ID="753628c9-9957-47b1-b7cf-f920ab443f66" SourceId="1" SourceUrl="http://localhost:38573/Terminal/Terminal.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

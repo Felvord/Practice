@@ -1,0 +1,5 @@
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\obj\Debug\TerminalService.csprojResolveAssemblyReference.cache
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\bin\TerminalService.dll
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\bin\TerminalService.pdb
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\obj\Debug\TerminalService.dll
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\obj\Debug\TerminalService.pdb

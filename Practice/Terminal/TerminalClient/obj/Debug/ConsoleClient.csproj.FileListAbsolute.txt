@@ -1,0 +1,6 @@
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.exe.config
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.exe
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.pdb
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.exe
+c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.pdb
