@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="testConnection">
+  <xs:element name="TestConnection">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="testConnectionResponse">
+  <xs:element name="TestConnectionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="testConnectionResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TestConnectionResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCommand">
+  <xs:element name="GetCommand">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="str" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getCommandResponse">
+  <xs:element name="GetCommandResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getCommandResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GetCommandResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

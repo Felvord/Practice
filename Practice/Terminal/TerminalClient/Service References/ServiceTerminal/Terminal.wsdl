@@ -6,32 +6,32 @@
       <xsd:import schemaLocation="http://localhost:38573/Terminal/Terminal.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ITerminal_testConnection_InputMessage">
-    <wsdl:part name="parameters" element="tns:testConnection" />
+  <wsdl:message name="ITerminal_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
   </wsdl:message>
-  <wsdl:message name="ITerminal_testConnection_OutputMessage">
-    <wsdl:part name="parameters" element="tns:testConnectionResponse" />
+  <wsdl:message name="ITerminal_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
   </wsdl:message>
-  <wsdl:message name="ITerminal_getCommand_InputMessage">
-    <wsdl:part name="parameters" element="tns:getCommand" />
+  <wsdl:message name="ITerminal_GetCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommand" />
   </wsdl:message>
-  <wsdl:message name="ITerminal_getCommand_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getCommandResponse" />
+  <wsdl:message name="ITerminal_GetCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandResponse" />
   </wsdl:message>
   <wsdl:portType name="ITerminal">
-    <wsdl:operation name="testConnection">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/testConnection" message="tns:ITerminal_testConnection_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/testConnectionResponse" message="tns:ITerminal_testConnection_OutputMessage" />
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/TestConnection" message="tns:ITerminal_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/TestConnectionResponse" message="tns:ITerminal_TestConnection_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getCommand">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/getCommand" message="tns:ITerminal_getCommand_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/getCommandResponse" message="tns:ITerminal_getCommand_OutputMessage" />
+    <wsdl:operation name="GetCommand">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/GetCommand" message="tns:ITerminal_GetCommand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/GetCommandResponse" message="tns:ITerminal_GetCommand_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITerminal" type="tns:ITerminal">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="testConnection">
-      <soap:operation soapAction="http://tempuri.org/ITerminal/testConnection" style="document" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/TestConnection" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -39,8 +39,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getCommand">
-      <soap:operation soapAction="http://tempuri.org/ITerminal/getCommand" style="document" />
+    <wsdl:operation name="GetCommand">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/GetCommand" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

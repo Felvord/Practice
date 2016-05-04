@@ -15,17 +15,17 @@ namespace ConsoleClient.ServiceTerminal {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceTerminal.ITerminal")]
     public interface ITerminal {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/testConnection", ReplyAction="http://tempuri.org/ITerminal/testConnectionResponse")]
-        string testConnection();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/TestConnection", ReplyAction="http://tempuri.org/ITerminal/TestConnectionResponse")]
+        string TestConnection();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/testConnection", ReplyAction="http://tempuri.org/ITerminal/testConnectionResponse")]
-        System.Threading.Tasks.Task<string> testConnectionAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/TestConnection", ReplyAction="http://tempuri.org/ITerminal/TestConnectionResponse")]
+        System.Threading.Tasks.Task<string> TestConnectionAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/getCommand", ReplyAction="http://tempuri.org/ITerminal/getCommandResponse")]
-        string getCommand(string str);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/GetCommand", ReplyAction="http://tempuri.org/ITerminal/GetCommandResponse")]
+        string GetCommand(string str);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/getCommand", ReplyAction="http://tempuri.org/ITerminal/getCommandResponse")]
-        System.Threading.Tasks.Task<string> getCommandAsync(string str);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/GetCommand", ReplyAction="http://tempuri.org/ITerminal/GetCommandResponse")]
+        System.Threading.Tasks.Task<string> GetCommandAsync(string str);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,20 +55,20 @@ namespace ConsoleClient.ServiceTerminal {
                 base(binding, remoteAddress) {
         }
         
-        public string testConnection() {
-            return base.Channel.testConnection();
+        public string TestConnection() {
+            return base.Channel.TestConnection();
         }
         
-        public System.Threading.Tasks.Task<string> testConnectionAsync() {
-            return base.Channel.testConnectionAsync();
+        public System.Threading.Tasks.Task<string> TestConnectionAsync() {
+            return base.Channel.TestConnectionAsync();
         }
         
-        public string getCommand(string str) {
-            return base.Channel.getCommand(str);
+        public string GetCommand(string str) {
+            return base.Channel.GetCommand(str);
         }
         
-        public System.Threading.Tasks.Task<string> getCommandAsync(string str) {
-            return base.Channel.getCommandAsync(str);
+        public System.Threading.Tasks.Task<string> GetCommandAsync(string str) {
+            return base.Channel.GetCommandAsync(str);
         }
     }
 }

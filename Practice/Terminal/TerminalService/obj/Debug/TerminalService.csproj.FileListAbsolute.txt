@@ -3,3 +3,12 @@ c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\bin\
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\bin\TerminalService.pdb
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\obj\Debug\TerminalService.dll
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalService\obj\Debug\TerminalService.pdb
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\TerminalService.dll
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\TerminalService.pdb
+C:\Users\Fel\Practice\Terminal\TerminalService\obj\Debug\TerminalService.dll
+C:\Users\Fel\Practice\Terminal\TerminalService\obj\Debug\TerminalService.pdb
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.dll
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.SqlServer.dll
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.xml
+C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.SqlServer.xml
+C:\Users\Fel\Practice\Terminal\TerminalService\obj\Debug\TerminalService.csprojResolveAssemblyReference.cache

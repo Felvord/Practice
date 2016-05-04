@@ -4,3 +4,12 @@ c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\bin\D
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.exe
 c:\users\fel\documents\visual studio 2012\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.pdb
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\TerminalClient.exe.config
+C:\Users\Fel\Practice\Terminal\TerminalClient\obj\Debug\TerminalClient.exe
+C:\Users\Fel\Practice\Terminal\TerminalClient\obj\Debug\TerminalClient.pdb
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\TerminalClient.exe
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\TerminalClient.pdb
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.xml

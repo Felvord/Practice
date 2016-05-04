@@ -11,22 +11,23 @@ namespace ConsoleClient
     {
         static void Main(string[] args)
         {
-            // создадим клиент сервиса
+            // создаём клиент сервиса
             TerminalClient client = new TerminalClient();
             Console.Title = "TerminalConsole";
-            Console.WriteLine("Welcome Terminal.Type !help for help.");
+            
 
             try
             {
                 // проверка соединения
                 Console.Write("Проверка соединения с сервисом... ");
-                if (!string.Equals(client.testConnection(), "OK", StringComparison.InvariantCultureIgnoreCase))
+                if (!string.Equals(client.TestConnection(), "OK", StringComparison.InvariantCultureIgnoreCase))
                 {
                     throw new Exception("Проверка соединения не удалась");
                 }
                 Console.Write("OK\n");
+                Console.WriteLine("Welcome Terminal.Type 'help' for help.");
                 string value = Console.ReadLine();
-                Console.WriteLine(client.getCommand(value));
+                Console.WriteLine(client.GetCommand(value));
 
             }
             catch (Exception ex)
