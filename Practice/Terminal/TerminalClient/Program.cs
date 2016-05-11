@@ -26,9 +26,20 @@ namespace ConsoleClient
                 }
                 Console.Write("OK\n");
                 Console.WriteLine("Welcome Terminal.Type 'help' for help.");
-                string value = Console.ReadLine();
-                Console.WriteLine(client.GetCommand(value));
-
+                string value;
+                do
+                {
+                    Console.Write("Teminal->");
+                    value = Console.ReadLine();
+                    if (value != "exit")
+                        Console.WriteLine(client.GetCommand(value));
+                    else
+                    {
+                        client.Exit();
+                        client.Close();
+                    };
+                }
+                while (value != "exit") ;      
             }
             catch (Exception ex)
             {
@@ -36,7 +47,6 @@ namespace ConsoleClient
                 Console.Write("Error: {0}", ex.Message);
             }
 
-            client.Close();
         }
     }
 }

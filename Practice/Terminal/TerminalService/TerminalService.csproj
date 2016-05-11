@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,8 +49,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,10 +75,41 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Storage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Storage.edmx</DependentUpon>
+      <LastGenOutput>Storage.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Storage.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Storage.edmx</DependentUpon>
+      <LastGenOutput>Storage.cs</LastGenOutput>
+    </Content>
     <Content Include="Terminal.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="hangar.cs">
+      <DependentUpon>Storage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="platform.cs">
+      <DependentUpon>Storage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Storage.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Storage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Storage.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Terminal.svc.cs">
       <DependentUpon>Terminal.svc</DependentUpon>
     </Compile>
@@ -85,12 +122,22 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\Fel.pubxml" />
+    <EntityDeploy Include="Storage.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Storage.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Storage.edmx.diagram">
+      <DependentUpon>Storage.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

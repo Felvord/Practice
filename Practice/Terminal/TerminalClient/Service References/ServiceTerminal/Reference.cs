@@ -26,6 +26,36 @@ namespace ConsoleClient.ServiceTerminal {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/GetCommand", ReplyAction="http://tempuri.org/ITerminal/GetCommandResponse")]
         System.Threading.Tasks.Task<string> GetCommandAsync(string str);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Help", ReplyAction="http://tempuri.org/ITerminal/HelpResponse")]
+        string Help([System.ServiceModel.MessageParameterAttribute(Name="help")] string help1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Help", ReplyAction="http://tempuri.org/ITerminal/HelpResponse")]
+        System.Threading.Tasks.Task<string> HelpAsync(string help);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Store", ReplyAction="http://tempuri.org/ITerminal/StoreResponse")]
+        string Store([System.ServiceModel.MessageParameterAttribute(Name="store")] string store1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Store", ReplyAction="http://tempuri.org/ITerminal/StoreResponse")]
+        System.Threading.Tasks.Task<string> StoreAsync(string store);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Showstatus", ReplyAction="http://tempuri.org/ITerminal/ShowstatusResponse")]
+        void Showstatus(string show);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Showstatus", ReplyAction="http://tempuri.org/ITerminal/ShowstatusResponse")]
+        System.Threading.Tasks.Task ShowstatusAsync(string show);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Free", ReplyAction="http://tempuri.org/ITerminal/FreeResponse")]
+        string Free([System.ServiceModel.MessageParameterAttribute(Name="free")] string free1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Free", ReplyAction="http://tempuri.org/ITerminal/FreeResponse")]
+        System.Threading.Tasks.Task<string> FreeAsync(string free);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Exit", ReplyAction="http://tempuri.org/ITerminal/ExitResponse")]
+        void Exit();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Exit", ReplyAction="http://tempuri.org/ITerminal/ExitResponse")]
+        System.Threading.Tasks.Task ExitAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +99,46 @@ namespace ConsoleClient.ServiceTerminal {
         
         public System.Threading.Tasks.Task<string> GetCommandAsync(string str) {
             return base.Channel.GetCommandAsync(str);
+        }
+        
+        public string Help(string help1) {
+            return base.Channel.Help(help1);
+        }
+        
+        public System.Threading.Tasks.Task<string> HelpAsync(string help) {
+            return base.Channel.HelpAsync(help);
+        }
+        
+        public string Store(string store1) {
+            return base.Channel.Store(store1);
+        }
+        
+        public System.Threading.Tasks.Task<string> StoreAsync(string store) {
+            return base.Channel.StoreAsync(store);
+        }
+        
+        public void Showstatus(string show) {
+            base.Channel.Showstatus(show);
+        }
+        
+        public System.Threading.Tasks.Task ShowstatusAsync(string show) {
+            return base.Channel.ShowstatusAsync(show);
+        }
+        
+        public string Free(string free1) {
+            return base.Channel.Free(free1);
+        }
+        
+        public System.Threading.Tasks.Task<string> FreeAsync(string free) {
+            return base.Channel.FreeAsync(free);
+        }
+        
+        public void Exit() {
+            base.Channel.Exit();
+        }
+        
+        public System.Threading.Tasks.Task ExitAsync() {
+            return base.Channel.ExitAsync();
         }
     }
 }

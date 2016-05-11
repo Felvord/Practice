@@ -13,3 +13,56 @@ C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.dll
 C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.xml
 C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.exe.config
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.exe
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\obj\Debug\TerminalClient.pdb
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.exe
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\TerminalClient.pdb
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\EntityFramework.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\EntityFramework.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\MySql.Data.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\MySql.Data.Entity.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\MySql.Web.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\WebMatrix.Data.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.Helpers.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.Razor.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\WebMatrix.Data.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.Helpers.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.Razor.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\MySql.Data.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\MySql.Data.Entity.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\MySql.Web.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\WebMatrix.Data.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.Helpers.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.Razor.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\WebMatrix.Data.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.Helpers.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.Razor.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Fel\Practice\Terminal\TerminalClient\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Fel\Practice\Terminal\TerminalClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache

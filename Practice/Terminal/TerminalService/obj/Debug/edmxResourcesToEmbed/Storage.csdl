@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="storageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="hangar">
+    <Key>
+      <PropertyRef Name="hangarID" />
+    </Key>
+    <Property Name="hangarID" Type="Int32" Nullable="false" />
+    <Property Name="hangarName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="platformID" Type="Int32" Nullable="false" />
+    <Property Name="totalAmount" Type="Int32" Nullable="false" />
+    <Property Name="usedAmount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="platform" Relationship="Self.platformID" FromRole="hangar" ToRole="platform" />
+  </EntityType>
+  <EntityType Name="platform">
+    <Key>
+      <PropertyRef Name="platformID" />
+    </Key>
+    <Property Name="platformID" Type="Int32" Nullable="false" />
+    <Property Name="platformName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="hangar" Relationship="Self.platformID" FromRole="platform" ToRole="hangar" />
+  </EntityType>
+  <Association Name="platformID">
+    <End Role="platform" Type="Self.platform" Multiplicity="1" />
+    <End Role="hangar" Type="Self.hangar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="platform">
+        <PropertyRef Name="platformID" />
+      </Principal>
+      <Dependent Role="hangar">
+        <PropertyRef Name="platformID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="storageEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="hangar" EntityType="Self.hangar" />
+    <EntitySet Name="platform" EntityType="Self.platform" />
+    <AssociationSet Name="platformID" Association="Self.platformID">
+      <End Role="platform" EntitySet="platform" />
+      <End Role="hangar" EntitySet="hangar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

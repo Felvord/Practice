@@ -21,27 +21,27 @@ namespace TerminalService
             {
                 case "help":
                     {
-                        return ComHelp(str);
+                       return Help(str);
                     }
                     break;
                 case "showstatus":
                     {
-                        return str;
+                       Showstatus(str);
                     }
                     break;
-                case "store":
+                case "store <N>":
                     {
-                        return str;
+                        Store(str);
                     }
                     break;
-                case "free":
+                case "free <N> <H_ID>":
                     {
-                        return str;
+                        Free(str);
                     }
                     break;
                 case "exit":
                     {
-                        return str;
+                       Environment.Exit(0);
                     }
                     break;
                 default:
@@ -55,20 +55,43 @@ namespace TerminalService
             return "ERROR COMMAND";
         }
 
-        public string ComHelp (string help)
+        public string Help(string help)
         {
-            help = "";
-            string[] commands = new string[]
-             {
-                        "1. help – отображение отформатированной справки по всем поддерживаемым командам\n",
-                        "2. showstatus  – отображение отформатированной таблицы загруженности всех ангаров на всех площадках склада\n",
-                        "3. store <N> – разместить N контейнеров на складе, N – натуральное число\n",
-                        "4. free <N> <H_ID> – выгрузить N контейнеров из ангара H_ID на складе, N – натуральное число\n",
-                        "5. exit  – завершение работы\n",
-              };
-            foreach (var line in commands)
-                help += line;
+            help = @"1. help – отображение отформатированной справки по всем поддерживаемым командам
+2. showstatus  – отображение отформатированной таблицы загруженности всех ангаров на всех площадках склада
+3. store <N> – разместить N контейнеров на складе, N – натуральное число
+4. free <N> <H_ID> – выгрузить N контейнеров из ангара H_ID на складе, N – натуральное число
+5. exit  – завершение работы";
             return help;
+        }
+        public void Exit()
+        {
+           Environment.Exit(0);
+        }
+        public void Showstatus(string show)
+        {
+            storageEntities storage = new storageEntities();
+            List<hangar> list = storage.hangar.ToList();
+            show = "Номер платформы-------Имя ангара-------Вмещаемость ангара------Сколько мест занято\n";
+            
+            foreach (hangar item in list)
+            {
+                Console.WriteLine("TEST {0}",item.hangarName);
+            }
+            
+               // return show;
+        }
+        public string Store(string store)
+        {
+            storageEntities storage = new storageEntities();
+            storage.SaveChanges();
+            return store;
+        }
+        public string Free(string free)
+        {
+            storageEntities storage = new storageEntities();
+            storage.SaveChanges();
+            return free;
         }
     }
 }

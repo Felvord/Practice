@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище storageModel" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="hangar">
+          <Key>
+            <PropertyRef Name="hangarID" />
+          </Key>
+          <Property Name="hangarID" Type="int" Nullable="false" />
+          <Property Name="hangarName" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="platformID" Type="int" Nullable="false" />
+          <Property Name="totalAmount" Type="int" Nullable="false" />
+          <Property Name="usedAmount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="platform">
+          <Key>
+            <PropertyRef Name="platformID" />
+          </Key>
+          <Property Name="platformID" Type="int" Nullable="false" />
+          <Property Name="platformName" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <Association Name="platformID">
+          <End Role="platform" Type="Self.platform" Multiplicity="1" />
+          <End Role="hangar" Type="Self.hangar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="platform">
+              <PropertyRef Name="platformID" />
+            </Principal>
+            <Dependent Role="hangar">
+              <PropertyRef Name="platformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище storageModelContainer">
+          <EntitySet Name="hangar" EntityType="Self.hangar" Schema="storage" store:Type="Tables" />
+          <EntitySet Name="platform" EntityType="Self.platform" Schema="storage" store:Type="Tables" />
+          <AssociationSet Name="platformID" Association="Self.platformID">
+            <End Role="platform" EntitySet="platform" />
+            <End Role="hangar" EntitySet="hangar" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="storageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="hangar">
+          <Key>
+            <PropertyRef Name="hangarID" />
+          </Key>
+          <Property Name="hangarID" Type="Int32" Nullable="false" />
+          <Property Name="hangarName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="platformID" Type="Int32" Nullable="false" />
+          <Property Name="totalAmount" Type="Int32" Nullable="false" />
+          <Property Name="usedAmount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="platform" Relationship="Self.platformID" FromRole="hangar" ToRole="platform" />
+        </EntityType>
+        <EntityType Name="platform">
+          <Key>
+            <PropertyRef Name="platformID" />
+          </Key>
+          <Property Name="platformID" Type="Int32" Nullable="false" />
+          <Property Name="platformName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="hangar" Relationship="Self.platformID" FromRole="platform" ToRole="hangar" />
+        </EntityType>
+        <Association Name="platformID">
+          <End Role="platform" Type="Self.platform" Multiplicity="1" />
+          <End Role="hangar" Type="Self.hangar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="platform">
+              <PropertyRef Name="platformID" />
+            </Principal>
+            <Dependent Role="hangar">
+              <PropertyRef Name="platformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="storageEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="hangar" EntityType="Self.hangar" />
+          <EntitySet Name="platform" EntityType="Self.platform" />
+          <AssociationSet Name="platformID" Association="Self.platformID">
+            <End Role="platform" EntitySet="platform" />
+            <End Role="hangar" EntitySet="hangar" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище storageModelContainer" CdmEntityContainer="storageEntities">
+          <EntitySetMapping Name="hangar">
+            <EntityTypeMapping TypeName="storageModel.hangar">
+              <MappingFragment StoreEntitySet="hangar">
+                <ScalarProperty Name="hangarID" ColumnName="hangarID" />
+                <ScalarProperty Name="hangarName" ColumnName="hangarName" />
+                <ScalarProperty Name="platformID" ColumnName="platformID" />
+                <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+                <ScalarProperty Name="usedAmount" ColumnName="usedAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="platform">
+            <EntityTypeMapping TypeName="storageModel.platform">
+              <MappingFragment StoreEntitySet="platform">
+                <ScalarProperty Name="platformID" ColumnName="platformID" />
+                <ScalarProperty Name="platformName" ColumnName="platformName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

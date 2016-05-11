@@ -18,6 +18,36 @@
   <wsdl:message name="ITerminal_GetCommand_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCommandResponse" />
   </wsdl:message>
+  <wsdl:message name="ITerminal_Help_InputMessage">
+    <wsdl:part name="parameters" element="tns:Help" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Help_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Store_InputMessage">
+    <wsdl:part name="parameters" element="tns:Store" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Store_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Showstatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:Showstatus" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Showstatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Free_InputMessage">
+    <wsdl:part name="parameters" element="tns:Free" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Free_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Exit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Exit" />
+  </wsdl:message>
+  <wsdl:message name="ITerminal_Exit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExitResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITerminal">
     <wsdl:operation name="TestConnection">
       <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/TestConnection" message="tns:ITerminal_TestConnection_InputMessage" />
@@ -26,6 +56,26 @@
     <wsdl:operation name="GetCommand">
       <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/GetCommand" message="tns:ITerminal_GetCommand_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/GetCommandResponse" message="tns:ITerminal_GetCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Help">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Help" message="tns:ITerminal_Help_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/HelpResponse" message="tns:ITerminal_Help_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Store">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Store" message="tns:ITerminal_Store_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/StoreResponse" message="tns:ITerminal_Store_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Showstatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Showstatus" message="tns:ITerminal_Showstatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/ShowstatusResponse" message="tns:ITerminal_Showstatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Free">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Free" message="tns:ITerminal_Free_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/FreeResponse" message="tns:ITerminal_Free_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Exit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Exit" message="tns:ITerminal_Exit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/ExitResponse" message="tns:ITerminal_Exit_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITerminal" type="tns:ITerminal">
@@ -41,6 +91,51 @@
     </wsdl:operation>
     <wsdl:operation name="GetCommand">
       <soap:operation soapAction="http://tempuri.org/ITerminal/GetCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Help">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/Help" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Store">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/Store" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Showstatus">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/Showstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Free">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/Free" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exit">
+      <soap:operation soapAction="http://tempuri.org/ITerminal/Exit" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

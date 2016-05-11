@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище storageModelContainer" CdmEntityContainer="storageEntities">
+    <EntitySetMapping Name="hangar">
+      <EntityTypeMapping TypeName="storageModel.hangar">
+        <MappingFragment StoreEntitySet="hangar">
+          <ScalarProperty Name="hangarID" ColumnName="hangarID" />
+          <ScalarProperty Name="hangarName" ColumnName="hangarName" />
+          <ScalarProperty Name="platformID" ColumnName="platformID" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="usedAmount" ColumnName="usedAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="platform">
+      <EntityTypeMapping TypeName="storageModel.platform">
+        <MappingFragment StoreEntitySet="platform">
+          <ScalarProperty Name="platformID" ColumnName="platformID" />
+          <ScalarProperty Name="platformName" ColumnName="platformName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

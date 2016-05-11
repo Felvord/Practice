@@ -11,15 +11,19 @@ namespace TerminalService
     [ServiceContract]
     public interface ITerminal
     {
-
         [OperationContract]
         string TestConnection();
-
         [OperationContract]
         string GetCommand(string str);
-
         [OperationContract]
-        string ComHelp(string help);
-
+        string Help(string help);
+        [OperationContract]
+        string Store(string store);
+        [OperationContract]
+        void Showstatus(string show);
+        [OperationContract]
+        string Free(string free);
+        [OperationContract]
+        void Exit();
     }
 }
