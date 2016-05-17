@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using System.Text.RegularExpressions;
-
 namespace TerminalService
 {
     public class Terminal : ITerminal

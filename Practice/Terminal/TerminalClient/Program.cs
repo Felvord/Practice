@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleClient.ServiceTerminal;
-
 namespace ConsoleClient
 {
     class Program
