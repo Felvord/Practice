@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TerminalService
 {
@@ -14,47 +15,26 @@ namespace TerminalService
         {
             return "OK";
         }
-
         public string GetCommand(string str)
         {
+            char ch = '<';
+            string temp = str;
+            if (str.Contains(ch))
+                str = str.Substring(0, str.IndexOf(ch) - 1);
             switch (str)
             {
                 case "help":
-                    {
-                       return Help(str);
-                    }
-                    break;
-                case "showstatus":
-                    {
-                       Showstatus(str);
-                    }
-                    break;
-                case "store <N>":
-                    {
-                        Store(str);
-                    }
-                    break;
-                case "free <N> <H_ID>":
-                    {
-                        Free(str);
-                    }
-                    break;
-                case "exit":
-                    {
-                       Environment.Exit(0);
-                    }
-                    break;
+                        return Help(str);
+                 case "showstatus":
+                        return Showstatus(str);
+                case "store":
+                        return Store(str, temp);
+                case "free":
+                        return Free(str, temp);
                 default:
-                    {
-                        Console.Write("Введите команду             ");
-
-                    }
-                    break;
+                       return string.Format("Введите корректную команду. Для справки наберите команду 'help'"); 
             }
-
-            return "ERROR COMMAND";
         }
-
         public string Help(string help)
         {
             help = @"1. help – отображение отформатированной справки по всем поддерживаемым командам
@@ -64,34 +44,114 @@ namespace TerminalService
 5. exit  – завершение работы";
             return help;
         }
-        public void Exit()
-        {
-           Environment.Exit(0);
-        }
-        public void Showstatus(string show)
+        public string Showstatus(string show)
         {
             storageEntities storage = new storageEntities();
-            List<hangar> list = storage.hangar.ToList();
-            show = "Номер платформы-------Имя ангара-------Вмещаемость ангара------Сколько мест занято\n";
-            
-            foreach (hangar item in list)
+            List<hangar> value = storage.hangar.ToList();
+            show = "Platform-------Hangar--------Total Amount------Used Amount\n";
+            string result = "";
+            for (int i = 0; i < value.Count(); i++)
             {
-                Console.WriteLine("TEST {0}",item.hangarName);
+                var mark = value.ElementAt(i);
+                result += mark.platformID + "                " + mark.hangarName
+                    + "             " + mark.totalAmount
+                    + "            " + mark.usedAmount + "\n ";
+            };
+            return string.Format("{0} {1}", show, result);
+        }
+        public string Store(string store, string str) 
+        {
+            storageEntities storage = new storageEntities();
+            string[] arr = str.Split(' ');
+            string box = Regex.Replace(arr[1], @"\D", string.Empty); 
+            int chislo = Convert.ToInt32(box);
+            List<hangar> value = storage.hangar.ToList();
+            int temp;
+            bool flag = false;
+            try
+            {
+                for (int i = 0; i < value.Count(); i++)
+                {
+
+                    var mark = value.ElementAt(i);
+                    if (mark.usedAmount == mark.totalAmount) continue;
+                    else
+                    {
+                        temp = mark.usedAmount + chislo;
+                        if (temp > mark.totalAmount)
+                        {
+                            mark.usedAmount = mark.totalAmount;
+                            temp = temp - mark.totalAmount;
+                        }
+                        else
+                        {
+                            mark.usedAmount = temp;
+                            temp = 0;
+                            flag = true;
+                        }
+                    }
+                    if (temp != 0) chislo = temp;
+                    else break;
+                }
+                if (!flag)
+                {
+                    storage.SaveChanges();
+                    return string.Format("Невозможно разместить {0} коробок", chislo);
+                }
             }
-            
-               // return show;
+            catch (Exception ex)
+            {
+                Console.Write("Error: {0}", ex.Message);
+                storage.SaveChanges();
+            }
+            storage.SaveChanges();
+            return string.Format("Успешно на складе размещено {0} контейнеров", box);
         }
-        public string Store(string store)
+        public string Free(string free, string str)
         {
             storageEntities storage = new storageEntities();
+            string[] arr = str.Split(' ');
+            string box = Regex.Replace(arr[1], @"\D", string.Empty);
+            int count_box = Convert.ToInt32(box);
+            string hname = Regex.Replace(arr[2], @"\W", string.Empty);
+            List<hangar> value = storage.hangar.ToList();
+            int temp;
+            bool flag = false;
+            try
+            {
+                for (int i = 0; i < value.Count(); i++)
+                {
+                    var mark = value.ElementAt(i);
+                    if (mark.hangarName != hname) continue;
+                    else
+                    {
+                        temp = mark.usedAmount - count_box;
+                        if (temp < 0)
+                        {
+                            mark.usedAmount = 0;
+                            count_box = Math.Abs(temp);
+                            storage.SaveChanges();
+                            return string.Format("Невозможно выгрузить {0} коробок", count_box);
+                        }
+                        else
+                        {
+                            mark.usedAmount = temp;
+                            count_box = 0;
+                            flag = true;
+                            break;
+                        }
+                    }
+                }
+                if (!flag)
+                    return string.Format("Не существует такого ангара. Введите корректный ангар");
+            }
+            catch (Exception ex)
+            {
+                Console.Write("Error: {0}", ex.Message);
+                storage.SaveChanges();
+            }
             storage.SaveChanges();
-            return store;
-        }
-        public string Free(string free)
-        {
-            storageEntities storage = new storageEntities();
-            storage.SaveChanges();
-            return free;
+            return string.Format("Операция прошла успешно");
         }
     }
 }

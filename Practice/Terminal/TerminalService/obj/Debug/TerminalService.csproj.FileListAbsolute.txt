@@ -12,34 +12,18 @@ C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.SqlServer.dll
 C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.xml
 C:\Users\Fel\Practice\Terminal\TerminalService\bin\EntityFramework.SqlServer.xml
 C:\Users\Fel\Practice\Terminal\TerminalService\obj\Debug\TerminalService.csprojResolveAssemblyReference.cache
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\TerminalService.dll.config
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\TerminalService.dll
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\TerminalService.pdb
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.dll
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\MySql.Data.Entity.EF6.dll
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.xml
+C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.xml
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\obj\Debug\TerminalService.dll
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\obj\Debug\TerminalService.pdb
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\MySql.Data.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\MySql.Data.Entity.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\MySql.Web.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\WebMatrix.WebData.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\WebMatrix.Data.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.Razor.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.Helpers.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.Razor.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\WebMatrix.WebData.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\WebMatrix.Data.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.Razor.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.Helpers.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\Microsoft.Web.Infrastructure.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.Razor.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\MySql.Data.Entity.EF6.dll
-C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\bin\ru\EntityFramework.resources.dll
 C:\Users\Fel\Documents\Visual Studio 2015\Projects\Terminal\TerminalService\obj\Debug\TerminalService.csprojResolveAssemblyReference.cache
+C:\Users\Fel\Documents\Visual Studio 2012\Projects\Terminal\TerminalService\bin\EntityFramework.dll
+C:\Users\Fel\Documents\Visual Studio 2012\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.dll
+C:\Users\Fel\Documents\Visual Studio 2012\Projects\Terminal\TerminalService\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Fel\Documents\Visual Studio 2012\Projects\Terminal\TerminalService\bin\EntityFramework.xml
+C:\Users\Fel\Documents\Visual Studio 2012\Projects\Terminal\TerminalService\bin\EntityFramework.SqlServer.xml

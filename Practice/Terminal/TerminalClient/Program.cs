@@ -11,42 +11,38 @@ namespace ConsoleClient
     {
         static void Main(string[] args)
         {
-            // создаём клиент сервиса
-            TerminalClient client = new TerminalClient();
-            Console.Title = "TerminalConsole";
-            
-
-            try
+            using (TerminalClient client = new TerminalClient())
             {
-                // проверка соединения
-                Console.Write("Проверка соединения с сервисом... ");
-                if (!string.Equals(client.TestConnection(), "OK", StringComparison.InvariantCultureIgnoreCase))
+                Console.Title = "TerminalConsole";
+                try
                 {
-                    throw new Exception("Проверка соединения не удалась");
-                }
-                Console.Write("OK\n");
-                Console.WriteLine("Welcome Terminal.Type 'help' for help.");
-                string value;
-                do
-                {
-                    Console.Write("Teminal->");
-                    value = Console.ReadLine();
-                    if (value != "exit")
-                        Console.WriteLine(client.GetCommand(value));
-                    else
+                    Console.Write("Проверка соединения с сервисом... ");
+                    if (!string.Equals(client.TestConnection(), "OK", StringComparison.InvariantCultureIgnoreCase))
                     {
-                        client.Exit();
-                        client.Close();
-                    };
+                        throw new Exception("Проверка соединения не удалась");
+                    }
+                    Console.Write("OK\n");
+                    Console.WriteLine("Welcome Terminal.Type 'help' for help.");
+                    string value;
+                    do
+                    {
+                        Console.Write("Teminal->");
+                        value = Console.ReadLine();
+                        if (value != "exit")
+                            Console.WriteLine(client.GetCommand(value));
+                        else
+                        {
+                            client.Close();
+                        };
+                    }
+                    while (value != "exit");
                 }
-                while (value != "exit") ;      
+                catch (Exception ex)
+                {
+                    Console.Write("Error: {0}", ex.Message);
+                    client.Abort(); 
+                }
             }
-            catch (Exception ex)
-            {
-                client.Abort();
-                Console.Write("Error: {0}", ex.Message);
-            }
-
         }
     }
 }

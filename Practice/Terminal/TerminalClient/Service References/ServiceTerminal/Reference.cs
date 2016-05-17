@@ -34,28 +34,22 @@ namespace ConsoleClient.ServiceTerminal {
         System.Threading.Tasks.Task<string> HelpAsync(string help);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Store", ReplyAction="http://tempuri.org/ITerminal/StoreResponse")]
-        string Store([System.ServiceModel.MessageParameterAttribute(Name="store")] string store1);
+        string Store([System.ServiceModel.MessageParameterAttribute(Name="store")] string store1, string temp);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Store", ReplyAction="http://tempuri.org/ITerminal/StoreResponse")]
-        System.Threading.Tasks.Task<string> StoreAsync(string store);
+        System.Threading.Tasks.Task<string> StoreAsync(string store, string temp);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Showstatus", ReplyAction="http://tempuri.org/ITerminal/ShowstatusResponse")]
-        void Showstatus(string show);
+        string Showstatus(string show);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Showstatus", ReplyAction="http://tempuri.org/ITerminal/ShowstatusResponse")]
-        System.Threading.Tasks.Task ShowstatusAsync(string show);
+        System.Threading.Tasks.Task<string> ShowstatusAsync(string show);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Free", ReplyAction="http://tempuri.org/ITerminal/FreeResponse")]
-        string Free([System.ServiceModel.MessageParameterAttribute(Name="free")] string free1);
+        string Free([System.ServiceModel.MessageParameterAttribute(Name="free")] string free1, string temp);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Free", ReplyAction="http://tempuri.org/ITerminal/FreeResponse")]
-        System.Threading.Tasks.Task<string> FreeAsync(string free);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Exit", ReplyAction="http://tempuri.org/ITerminal/ExitResponse")]
-        void Exit();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITerminal/Exit", ReplyAction="http://tempuri.org/ITerminal/ExitResponse")]
-        System.Threading.Tasks.Task ExitAsync();
+        System.Threading.Tasks.Task<string> FreeAsync(string free, string temp);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -109,36 +103,28 @@ namespace ConsoleClient.ServiceTerminal {
             return base.Channel.HelpAsync(help);
         }
         
-        public string Store(string store1) {
-            return base.Channel.Store(store1);
+        public string Store(string store1, string temp) {
+            return base.Channel.Store(store1, temp);
         }
         
-        public System.Threading.Tasks.Task<string> StoreAsync(string store) {
-            return base.Channel.StoreAsync(store);
+        public System.Threading.Tasks.Task<string> StoreAsync(string store, string temp) {
+            return base.Channel.StoreAsync(store, temp);
         }
         
-        public void Showstatus(string show) {
-            base.Channel.Showstatus(show);
+        public string Showstatus(string show) {
+            return base.Channel.Showstatus(show);
         }
         
-        public System.Threading.Tasks.Task ShowstatusAsync(string show) {
+        public System.Threading.Tasks.Task<string> ShowstatusAsync(string show) {
             return base.Channel.ShowstatusAsync(show);
         }
         
-        public string Free(string free1) {
-            return base.Channel.Free(free1);
+        public string Free(string free1, string temp) {
+            return base.Channel.Free(free1, temp);
         }
         
-        public System.Threading.Tasks.Task<string> FreeAsync(string free) {
-            return base.Channel.FreeAsync(free);
-        }
-        
-        public void Exit() {
-            base.Channel.Exit();
-        }
-        
-        public System.Threading.Tasks.Task ExitAsync() {
-            return base.Channel.ExitAsync();
+        public System.Threading.Tasks.Task<string> FreeAsync(string free, string temp) {
+            return base.Channel.FreeAsync(free, temp);
         }
     }
 }

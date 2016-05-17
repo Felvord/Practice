@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище storageModel" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище storageModel" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="hangar">
           <Key>
             <PropertyRef Name="hangarID" />
@@ -13,7 +13,7 @@
           <Property Name="hangarName" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="platformID" Type="int" Nullable="false" />
           <Property Name="totalAmount" Type="int" Nullable="false" />
-          <Property Name="usedAmount" Type="int" Nullable="false" />
+          <Property Name="usedAmount" Type="int" Nullable="true" />
         </EntityType>
         <EntityType Name="platform">
           <Key>
@@ -42,8 +42,7 @@
             <End Role="hangar" EntitySet="hangar" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="storageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -55,7 +54,7 @@
           <Property Name="hangarName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="platformID" Type="Int32" Nullable="false" />
           <Property Name="totalAmount" Type="Int32" Nullable="false" />
-          <Property Name="usedAmount" Type="Int32" Nullable="false" />
+          <Property Name="usedAmount" Type="Int32" Nullable="true" />
           <NavigationProperty Name="platform" Relationship="Self.platformID" FromRole="hangar" ToRole="platform" />
         </EntityType>
         <EntityType Name="platform">

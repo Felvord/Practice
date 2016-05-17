@@ -8,7 +8,7 @@
     <Property Name="hangarName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="platformID" Type="Int32" Nullable="false" />
     <Property Name="totalAmount" Type="Int32" Nullable="false" />
-    <Property Name="usedAmount" Type="Int32" Nullable="false" />
+    <Property Name="usedAmount" Type="Int32" Nullable="true" />
     <NavigationProperty Name="platform" Relationship="Self.platformID" FromRole="hangar" ToRole="platform" />
   </EntityType>
   <EntityType Name="platform">

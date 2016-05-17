@@ -18,12 +18,10 @@ namespace TerminalService
         [OperationContract]
         string Help(string help);
         [OperationContract]
-        string Store(string store);
+        string Store(string store, string temp);
         [OperationContract]
-        void Showstatus(string show);
+        string Showstatus(string show);
         [OperationContract]
-        string Free(string free);
-        [OperationContract]
-        void Exit();
+        string Free(string free, string temp);
     }
 }

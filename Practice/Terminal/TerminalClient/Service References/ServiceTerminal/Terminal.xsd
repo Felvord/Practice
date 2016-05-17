@@ -44,6 +44,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="store" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="temp" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -63,13 +64,16 @@
   </xs:element>
   <xs:element name="ShowstatusResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShowstatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Free">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="free" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="temp" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -78,16 +82,6 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="FreeResult" nillable="true" type="xs:string" />
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Exit">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ExitResponse">
-    <xs:complexType>
-      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

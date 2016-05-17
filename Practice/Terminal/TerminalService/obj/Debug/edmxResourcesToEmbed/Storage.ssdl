@@ -8,7 +8,7 @@
     <Property Name="hangarName" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="platformID" Type="int" Nullable="false" />
     <Property Name="totalAmount" Type="int" Nullable="false" />
-    <Property Name="usedAmount" Type="int" Nullable="false" />
+    <Property Name="usedAmount" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="platform">
     <Key>

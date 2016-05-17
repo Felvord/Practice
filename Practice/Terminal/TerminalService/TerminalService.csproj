@@ -125,6 +125,7 @@
     <EntityDeploy Include="Storage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Storage.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EntityDeploy>
     <Content Include="Storage.edmx.diagram">
       <DependentUpon>Storage.edmx</DependentUpon>

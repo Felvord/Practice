@@ -42,12 +42,6 @@
   <wsdl:message name="ITerminal_Free_OutputMessage">
     <wsdl:part name="parameters" element="tns:FreeResponse" />
   </wsdl:message>
-  <wsdl:message name="ITerminal_Exit_InputMessage">
-    <wsdl:part name="parameters" element="tns:Exit" />
-  </wsdl:message>
-  <wsdl:message name="ITerminal_Exit_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ExitResponse" />
-  </wsdl:message>
   <wsdl:portType name="ITerminal">
     <wsdl:operation name="TestConnection">
       <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/TestConnection" message="tns:ITerminal_TestConnection_InputMessage" />
@@ -72,10 +66,6 @@
     <wsdl:operation name="Free">
       <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Free" message="tns:ITerminal_Free_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/FreeResponse" message="tns:ITerminal_Free_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Exit">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITerminal/Exit" message="tns:ITerminal_Exit_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITerminal/ExitResponse" message="tns:ITerminal_Exit_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITerminal" type="tns:ITerminal">
@@ -127,15 +117,6 @@
     </wsdl:operation>
     <wsdl:operation name="Free">
       <soap:operation soapAction="http://tempuri.org/ITerminal/Free" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Exit">
-      <soap:operation soapAction="http://tempuri.org/ITerminal/Exit" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
